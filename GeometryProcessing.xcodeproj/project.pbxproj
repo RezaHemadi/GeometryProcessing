@@ -9,12 +9,111 @@
 /* Begin PBXBuildFile section */
 		F5B8A78E2A42EB8C00D47C82 /* GeometryProcessing.docc in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */; };
 		F5B8A78F2A42EB8C00D47C82 /* GeometryProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5B8A79E2A42F11500D47C82 /* Matrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B8A79B2A42EE1700D47C82 /* Matrix.framework */; platformFilter = ios; };
+		F5B8A79F2A42F11500D47C82 /* Matrix.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F5B8A79B2A42EE1700D47C82 /* Matrix.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F5B8A7A22A42F13000D47C82 /* doubleArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7A12A42F13000D47C82 /* doubleArea.swift */; };
+		F5B8A7A42A42FD0700D47C82 /* edge_lengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7A32A42FD0700D47C82 /* edge_lengths.swift */; };
+		F5B8A7A62A42FDA500D47C82 /* project_isometrically_to_plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7A52A42FDA500D47C82 /* project_isometrically_to_plane.swift */; };
+		F5B8A7A82A42FDC100D47C82 /* squared_edge_lengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7A72A42FDC100D47C82 /* squared_edge_lengths.swift */; };
+		F5B8A7AA2A42FE3C00D47C82 /* Slice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7A92A42FE3C00D47C82 /* Slice.swift */; };
+		F5B8A7AC2A42FE5E00D47C82 /* local_basis.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7AB2A42FE5E00D47C82 /* local_basis.swift */; };
+		F5B8A7AE2A42FE8200D47C82 /* grad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7AD2A42FE8200D47C82 /* grad.swift */; };
+		F5B8A7B02A42FEDC00D47C82 /* per_face_normals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7AF2A42FEDC00D47C82 /* per_face_normals.swift */; };
+		F5B8A7B22A42FEF300D47C82 /* cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7B12A42FEF300D47C82 /* cat.swift */; };
+		F5B8A7B42A42FF0E00D47C82 /* flip_avoiding_linesearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7B32A42FF0E00D47C82 /* flip_avoiding_linesearch.swift */; };
+		F5B8A7B62A42FF8A00D47C82 /* linesearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7B52A42FF8A00D47C82 /* linesearch.swift */; };
+		F5B8A7B82A42FFA400D47C82 /* boundary_loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7B72A42FFA400D47C82 /* boundary_loop.swift */; };
+		F5B8A7BA2A42FFC900D47C82 /* triangle_triangle_adjacency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7B92A42FFC900D47C82 /* triangle_triangle_adjacency.swift */; };
+		F5B8A7BC2A42FFE400D47C82 /* vertex_triangle_adjacency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7BB2A42FFE400D47C82 /* vertex_triangle_adjacency.swift */; };
+		F5B8A7BE2A43000000D47C82 /* cumsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7BD2A43000000D47C82 /* cumsum.swift */; };
+		F5B8A7C02A43002100D47C82 /* is_border_vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7BF2A43002100D47C82 /* is_border_vertex.swift */; };
+		F5B8A7C22A43003800D47C82 /* map_vertices_to_circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7C12A43003800D47C82 /* map_vertices_to_circle.swift */; };
+		F5B8A7C42A43005300D47C82 /* harmonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7C32A43005300D47C82 /* harmonic.swift */; };
+		F5B8A7C62A43010700D47C82 /* cotmatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7C52A43010700D47C82 /* cotmatrix.swift */; };
+		F5B8A7CA2A43014600D47C82 /* cotmatrix_entries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7C92A43014600D47C82 /* cotmatrix_entries.swift */; };
+		F5B8A7CC2A43015D00D47C82 /* geom_sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7CB2A43015D00D47C82 /* geom_sort.swift */; };
+		F5B8A7CE2A431F6A00D47C82 /* reorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7CD2A431F6A00D47C82 /* reorder.swift */; };
+		F5B8A7D02A431F8600D47C82 /* adjacency_matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7CF2A431F8600D47C82 /* adjacency_matrix.swift */; };
+		F5B8A7D22A431FA100D47C82 /* vector_area_matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7D12A431FA100D47C82 /* vector_area_matrix.swift */; };
+		F5B8A7D42A431FB900D47C82 /* boundary_facets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7D32A431FB900D47C82 /* boundary_facets.swift */; };
+		F5B8A7D62A431FCE00D47C82 /* unique_rows.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7D52A431FCE00D47C82 /* unique_rows.swift */; };
+		F5B8A7D82A431FE400D47C82 /* accumarray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7D72A431FE400D47C82 /* accumarray.swift */; };
+		F5B8A7DA2A433C9700D47C82 /* repdiag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7D92A433C9700D47C82 /* repdiag.swift */; };
+		F5B8A7DC2A433CAC00D47C82 /* lscm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7DB2A433CAC00D47C82 /* lscm.swift */; };
+		F5B8A7DE2A433CC300D47C82 /* PerFaceNormals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7DD2A433CC300D47C82 /* PerFaceNormals.swift */; };
+		F5B8A7E02A433CDC00D47C82 /* PerVertexNormals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7DF2A433CDC00D47C82 /* PerVertexNormals.swift */; };
+		F5B8A7E22A433CF200D47C82 /* PerVertexSmoothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E12A433CF200D47C82 /* PerVertexSmoothing.swift */; };
+		F5B8A7E42A43533600D47C82 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E32A43533600D47C82 /* Utils.swift */; };
+		F5B8A7E62A43592300D47C82 /* min_quad_with_fixed_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E52A43592300D47C82 /* min_quad_with_fixed_data.swift */; };
+		F5B8A7E82A43597000D47C82 /* min_quad_with_fixed_precompute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E72A43597000D47C82 /* min_quad_with_fixed_precompute.swift */; };
+		F5B8A7EA2A43598C00D47C82 /* min_quad_with_fixed_solve.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E92A43598C00D47C82 /* min_quad_with_fixed_solve.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5B8A79A2A42EE1700D47C82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5B8A7962A42EE1700D47C82 /* Matrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F51B41202A114630007CD349;
+			remoteInfo = Matrix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5B8A7A02A42F11500D47C82 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F5B8A79F2A42F11500D47C82 /* Matrix.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F5B8A7892A42EB8C00D47C82 /* GeometryProcessing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryProcessing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryProcessing.h; sourceTree = "<group>"; };
 		F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GeometryProcessing.docc; sourceTree = "<group>"; };
+		F5B8A7962A42EE1700D47C82 /* Matrix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Matrix.xcodeproj; path = ../Matrix/Matrix.xcodeproj; sourceTree = "<group>"; };
+		F5B8A7A12A42F13000D47C82 /* doubleArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doubleArea.swift; sourceTree = "<group>"; };
+		F5B8A7A32A42FD0700D47C82 /* edge_lengths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edge_lengths.swift; sourceTree = "<group>"; };
+		F5B8A7A52A42FDA500D47C82 /* project_isometrically_to_plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project_isometrically_to_plane.swift; sourceTree = "<group>"; };
+		F5B8A7A72A42FDC100D47C82 /* squared_edge_lengths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = squared_edge_lengths.swift; sourceTree = "<group>"; };
+		F5B8A7A92A42FE3C00D47C82 /* Slice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slice.swift; sourceTree = "<group>"; };
+		F5B8A7AB2A42FE5E00D47C82 /* local_basis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = local_basis.swift; sourceTree = "<group>"; };
+		F5B8A7AD2A42FE8200D47C82 /* grad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grad.swift; sourceTree = "<group>"; };
+		F5B8A7AF2A42FEDC00D47C82 /* per_face_normals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = per_face_normals.swift; sourceTree = "<group>"; };
+		F5B8A7B12A42FEF300D47C82 /* cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cat.swift; sourceTree = "<group>"; };
+		F5B8A7B32A42FF0E00D47C82 /* flip_avoiding_linesearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flip_avoiding_linesearch.swift; sourceTree = "<group>"; };
+		F5B8A7B52A42FF8A00D47C82 /* linesearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linesearch.swift; sourceTree = "<group>"; };
+		F5B8A7B72A42FFA400D47C82 /* boundary_loop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boundary_loop.swift; sourceTree = "<group>"; };
+		F5B8A7B92A42FFC900D47C82 /* triangle_triangle_adjacency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triangle_triangle_adjacency.swift; sourceTree = "<group>"; };
+		F5B8A7BB2A42FFE400D47C82 /* vertex_triangle_adjacency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vertex_triangle_adjacency.swift; sourceTree = "<group>"; };
+		F5B8A7BD2A43000000D47C82 /* cumsum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cumsum.swift; sourceTree = "<group>"; };
+		F5B8A7BF2A43002100D47C82 /* is_border_vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = is_border_vertex.swift; sourceTree = "<group>"; };
+		F5B8A7C12A43003800D47C82 /* map_vertices_to_circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map_vertices_to_circle.swift; sourceTree = "<group>"; };
+		F5B8A7C32A43005300D47C82 /* harmonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = harmonic.swift; sourceTree = "<group>"; };
+		F5B8A7C52A43010700D47C82 /* cotmatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cotmatrix.swift; sourceTree = "<group>"; };
+		F5B8A7C92A43014600D47C82 /* cotmatrix_entries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cotmatrix_entries.swift; sourceTree = "<group>"; };
+		F5B8A7CB2A43015D00D47C82 /* geom_sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geom_sort.swift; sourceTree = "<group>"; };
+		F5B8A7CD2A431F6A00D47C82 /* reorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reorder.swift; sourceTree = "<group>"; };
+		F5B8A7CF2A431F8600D47C82 /* adjacency_matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adjacency_matrix.swift; sourceTree = "<group>"; };
+		F5B8A7D12A431FA100D47C82 /* vector_area_matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vector_area_matrix.swift; sourceTree = "<group>"; };
+		F5B8A7D32A431FB900D47C82 /* boundary_facets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boundary_facets.swift; sourceTree = "<group>"; };
+		F5B8A7D52A431FCE00D47C82 /* unique_rows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unique_rows.swift; sourceTree = "<group>"; };
+		F5B8A7D72A431FE400D47C82 /* accumarray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accumarray.swift; sourceTree = "<group>"; };
+		F5B8A7D92A433C9700D47C82 /* repdiag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repdiag.swift; sourceTree = "<group>"; };
+		F5B8A7DB2A433CAC00D47C82 /* lscm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lscm.swift; sourceTree = "<group>"; };
+		F5B8A7DD2A433CC300D47C82 /* PerFaceNormals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerFaceNormals.swift; sourceTree = "<group>"; };
+		F5B8A7DF2A433CDC00D47C82 /* PerVertexNormals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerVertexNormals.swift; sourceTree = "<group>"; };
+		F5B8A7E12A433CF200D47C82 /* PerVertexSmoothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerVertexSmoothing.swift; sourceTree = "<group>"; };
+		F5B8A7E32A43533600D47C82 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F5B8A7E52A43592300D47C82 /* min_quad_with_fixed_data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_quad_with_fixed_data.swift; sourceTree = "<group>"; };
+		F5B8A7E72A43597000D47C82 /* min_quad_with_fixed_precompute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_quad_with_fixed_precompute.swift; sourceTree = "<group>"; };
+		F5B8A7E92A43598C00D47C82 /* min_quad_with_fixed_solve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_quad_with_fixed_solve.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B8A79E2A42F11500D47C82 /* Matrix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +133,7 @@
 			children = (
 				F5B8A78B2A42EB8C00D47C82 /* GeometryProcessing */,
 				F5B8A78A2A42EB8C00D47C82 /* Products */,
+				F5B8A7952A42EE1600D47C82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,8 +150,60 @@
 			children = (
 				F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */,
 				F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */,
+				F5B8A7A12A42F13000D47C82 /* doubleArea.swift */,
+				F5B8A7A32A42FD0700D47C82 /* edge_lengths.swift */,
+				F5B8A7A52A42FDA500D47C82 /* project_isometrically_to_plane.swift */,
+				F5B8A7A72A42FDC100D47C82 /* squared_edge_lengths.swift */,
+				F5B8A7A92A42FE3C00D47C82 /* Slice.swift */,
+				F5B8A7AB2A42FE5E00D47C82 /* local_basis.swift */,
+				F5B8A7AD2A42FE8200D47C82 /* grad.swift */,
+				F5B8A7AF2A42FEDC00D47C82 /* per_face_normals.swift */,
+				F5B8A7B12A42FEF300D47C82 /* cat.swift */,
+				F5B8A7B32A42FF0E00D47C82 /* flip_avoiding_linesearch.swift */,
+				F5B8A7B52A42FF8A00D47C82 /* linesearch.swift */,
+				F5B8A7B72A42FFA400D47C82 /* boundary_loop.swift */,
+				F5B8A7B92A42FFC900D47C82 /* triangle_triangle_adjacency.swift */,
+				F5B8A7BB2A42FFE400D47C82 /* vertex_triangle_adjacency.swift */,
+				F5B8A7BD2A43000000D47C82 /* cumsum.swift */,
+				F5B8A7BF2A43002100D47C82 /* is_border_vertex.swift */,
+				F5B8A7C12A43003800D47C82 /* map_vertices_to_circle.swift */,
+				F5B8A7C32A43005300D47C82 /* harmonic.swift */,
+				F5B8A7C52A43010700D47C82 /* cotmatrix.swift */,
+				F5B8A7C92A43014600D47C82 /* cotmatrix_entries.swift */,
+				F5B8A7CB2A43015D00D47C82 /* geom_sort.swift */,
+				F5B8A7CD2A431F6A00D47C82 /* reorder.swift */,
+				F5B8A7CF2A431F8600D47C82 /* adjacency_matrix.swift */,
+				F5B8A7D12A431FA100D47C82 /* vector_area_matrix.swift */,
+				F5B8A7D32A431FB900D47C82 /* boundary_facets.swift */,
+				F5B8A7D52A431FCE00D47C82 /* unique_rows.swift */,
+				F5B8A7D72A431FE400D47C82 /* accumarray.swift */,
+				F5B8A7D92A433C9700D47C82 /* repdiag.swift */,
+				F5B8A7DB2A433CAC00D47C82 /* lscm.swift */,
+				F5B8A7DD2A433CC300D47C82 /* PerFaceNormals.swift */,
+				F5B8A7DF2A433CDC00D47C82 /* PerVertexNormals.swift */,
+				F5B8A7E12A433CF200D47C82 /* PerVertexSmoothing.swift */,
+				F5B8A7E32A43533600D47C82 /* Utils.swift */,
+				F5B8A7E52A43592300D47C82 /* min_quad_with_fixed_data.swift */,
+				F5B8A7E72A43597000D47C82 /* min_quad_with_fixed_precompute.swift */,
+				F5B8A7E92A43598C00D47C82 /* min_quad_with_fixed_solve.swift */,
 			);
 			path = GeometryProcessing;
+			sourceTree = "<group>";
+		};
+		F5B8A7952A42EE1600D47C82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5B8A7962A42EE1700D47C82 /* Matrix.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5B8A7972A42EE1700D47C82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5B8A79B2A42EE1700D47C82 /* Matrix.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,6 +228,7 @@
 				F5B8A7852A42EB8C00D47C82 /* Sources */,
 				F5B8A7862A42EB8C00D47C82 /* Frameworks */,
 				F5B8A7872A42EB8C00D47C82 /* Resources */,
+				F5B8A7A02A42F11500D47C82 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,12 +264,28 @@
 			mainGroup = F5B8A77F2A42EB8C00D47C82;
 			productRefGroup = F5B8A78A2A42EB8C00D47C82 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F5B8A7972A42EE1700D47C82 /* Products */;
+					ProjectRef = F5B8A7962A42EE1700D47C82 /* Matrix.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F5B8A7882A42EB8C00D47C82 /* GeometryProcessing */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F5B8A79B2A42EE1700D47C82 /* Matrix.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Matrix.framework;
+			remoteRef = F5B8A79A2A42EE1700D47C82 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F5B8A7872A42EB8C00D47C82 /* Resources */ = {
@@ -132,7 +302,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B8A7B22A42FEF300D47C82 /* cat.swift in Sources */,
+				F5B8A7CA2A43014600D47C82 /* cotmatrix_entries.swift in Sources */,
+				F5B8A7C02A43002100D47C82 /* is_border_vertex.swift in Sources */,
+				F5B8A7EA2A43598C00D47C82 /* min_quad_with_fixed_solve.swift in Sources */,
+				F5B8A7BE2A43000000D47C82 /* cumsum.swift in Sources */,
 				F5B8A78E2A42EB8C00D47C82 /* GeometryProcessing.docc in Sources */,
+				F5B8A7A42A42FD0700D47C82 /* edge_lengths.swift in Sources */,
+				F5B8A7D62A431FCE00D47C82 /* unique_rows.swift in Sources */,
+				F5B8A7A82A42FDC100D47C82 /* squared_edge_lengths.swift in Sources */,
+				F5B8A7E62A43592300D47C82 /* min_quad_with_fixed_data.swift in Sources */,
+				F5B8A7DA2A433C9700D47C82 /* repdiag.swift in Sources */,
+				F5B8A7E82A43597000D47C82 /* min_quad_with_fixed_precompute.swift in Sources */,
+				F5B8A7E42A43533600D47C82 /* Utils.swift in Sources */,
+				F5B8A7BA2A42FFC900D47C82 /* triangle_triangle_adjacency.swift in Sources */,
+				F5B8A7AE2A42FE8200D47C82 /* grad.swift in Sources */,
+				F5B8A7CC2A43015D00D47C82 /* geom_sort.swift in Sources */,
+				F5B8A7E22A433CF200D47C82 /* PerVertexSmoothing.swift in Sources */,
+				F5B8A7B82A42FFA400D47C82 /* boundary_loop.swift in Sources */,
+				F5B8A7B62A42FF8A00D47C82 /* linesearch.swift in Sources */,
+				F5B8A7D22A431FA100D47C82 /* vector_area_matrix.swift in Sources */,
+				F5B8A7D42A431FB900D47C82 /* boundary_facets.swift in Sources */,
+				F5B8A7BC2A42FFE400D47C82 /* vertex_triangle_adjacency.swift in Sources */,
+				F5B8A7DE2A433CC300D47C82 /* PerFaceNormals.swift in Sources */,
+				F5B8A7E02A433CDC00D47C82 /* PerVertexNormals.swift in Sources */,
+				F5B8A7A22A42F13000D47C82 /* doubleArea.swift in Sources */,
+				F5B8A7B02A42FEDC00D47C82 /* per_face_normals.swift in Sources */,
+				F5B8A7C62A43010700D47C82 /* cotmatrix.swift in Sources */,
+				F5B8A7AA2A42FE3C00D47C82 /* Slice.swift in Sources */,
+				F5B8A7C42A43005300D47C82 /* harmonic.swift in Sources */,
+				F5B8A7DC2A433CAC00D47C82 /* lscm.swift in Sources */,
+				F5B8A7C22A43003800D47C82 /* map_vertices_to_circle.swift in Sources */,
+				F5B8A7B42A42FF0E00D47C82 /* flip_avoiding_linesearch.swift in Sources */,
+				F5B8A7A62A42FDA500D47C82 /* project_isometrically_to_plane.swift in Sources */,
+				F5B8A7AC2A42FE5E00D47C82 /* local_basis.swift in Sources */,
+				F5B8A7CE2A431F6A00D47C82 /* reorder.swift in Sources */,
+				F5B8A7D02A431F8600D47C82 /* adjacency_matrix.swift in Sources */,
+				F5B8A7D82A431FE400D47C82 /* accumarray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
