@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F57887A22A435D9F00EF2409 /* avg_edge_length.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57887A12A435D9F00EF2409 /* avg_edge_length.swift */; };
 		F5B8A78E2A42EB8C00D47C82 /* GeometryProcessing.docc in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */; };
 		F5B8A78F2A42EB8C00D47C82 /* GeometryProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5B8A79E2A42F11500D47C82 /* Matrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B8A79B2A42EE1700D47C82 /* Matrix.framework */; platformFilter = ios; };
@@ -47,6 +48,7 @@
 		F5B8A7E62A43592300D47C82 /* min_quad_with_fixed_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E52A43592300D47C82 /* min_quad_with_fixed_data.swift */; };
 		F5B8A7E82A43597000D47C82 /* min_quad_with_fixed_precompute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E72A43597000D47C82 /* min_quad_with_fixed_precompute.swift */; };
 		F5B8A7EA2A43598C00D47C82 /* min_quad_with_fixed_solve.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E92A43598C00D47C82 /* min_quad_with_fixed_solve.swift */; };
+		F5DD34032A44496A008C59C0 /* edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD34022A44496A008C59C0 /* edges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F57887A12A435D9F00EF2409 /* avg_edge_length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avg_edge_length.swift; sourceTree = "<group>"; };
 		F5B8A7892A42EB8C00D47C82 /* GeometryProcessing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryProcessing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryProcessing.h; sourceTree = "<group>"; };
 		F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GeometryProcessing.docc; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		F5B8A7E52A43592300D47C82 /* min_quad_with_fixed_data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_quad_with_fixed_data.swift; sourceTree = "<group>"; };
 		F5B8A7E72A43597000D47C82 /* min_quad_with_fixed_precompute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_quad_with_fixed_precompute.swift; sourceTree = "<group>"; };
 		F5B8A7E92A43598C00D47C82 /* min_quad_with_fixed_solve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_quad_with_fixed_solve.swift; sourceTree = "<group>"; };
+		F5DD34022A44496A008C59C0 /* edges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edges.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,8 @@
 				F5B8A7E52A43592300D47C82 /* min_quad_with_fixed_data.swift */,
 				F5B8A7E72A43597000D47C82 /* min_quad_with_fixed_precompute.swift */,
 				F5B8A7E92A43598C00D47C82 /* min_quad_with_fixed_solve.swift */,
+				F57887A12A435D9F00EF2409 /* avg_edge_length.swift */,
+				F5DD34022A44496A008C59C0 /* edges.swift */,
 			);
 			path = GeometryProcessing;
 			sourceTree = "<group>";
@@ -339,6 +345,8 @@
 				F5B8A7CE2A431F6A00D47C82 /* reorder.swift in Sources */,
 				F5B8A7D02A431F8600D47C82 /* adjacency_matrix.swift in Sources */,
 				F5B8A7D82A431FE400D47C82 /* accumarray.swift in Sources */,
+				F57887A22A435D9F00EF2409 /* avg_edge_length.swift in Sources */,
+				F5DD34032A44496A008C59C0 /* edges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
