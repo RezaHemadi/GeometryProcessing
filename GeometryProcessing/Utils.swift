@@ -30,3 +30,9 @@ extension Array {
         removeSubrange((lastUniqueIdx + 1)..<endIndex)
     }
 }
+
+public protocol Countable {
+    var count: Int { get }
+}
+
+extension Array: Countable {}

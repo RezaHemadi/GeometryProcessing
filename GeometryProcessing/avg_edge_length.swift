@@ -20,7 +20,7 @@ import Matrix
 //   l  average edge length
 //
 // See also: adjacency_matrix
-func avg_edge_length<MV: Matrix, MF: Matrix>(_ V: MV, _ F: MF) -> Double where MV.Element == Double, MF.Element == Int {
+public func avg_edge_length<MV: Matrix, MF: Matrix>(_ V: MV, _ F: MF) -> Double where MV.Element == Double, MF.Element == Int {
     var E = MatX2<Int>()
     edges(F, &E)
     
@@ -33,7 +33,7 @@ func avg_edge_length<MV: Matrix, MF: Matrix>(_ V: MV, _ F: MF) -> Double where M
     return avg / Double(E.rows)
 }
 
-func avg_edge_length<MV: Matrix, MF: Matrix>(_ V: MV, _ F: MF) -> Float where MV.Element == Float, MF.Element == Int {
+public func avg_edge_length<MV: Matrix, MF: Matrix>(_ V: MV, _ F: MF) -> Float where MV.Element == Float, MF.Element == Int {
     var E = MatX2<Int>()
     edges(F, &E)
     

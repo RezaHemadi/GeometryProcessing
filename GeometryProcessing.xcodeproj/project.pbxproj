@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F53298DE2A45DB38009358E7 /* list_to_matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298DD2A45DB38009358E7 /* list_to_matrix.swift */; };
+		F53298E12A45DCEF009358E7 /* min_size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298E02A45DCEF009358E7 /* min_size.swift */; };
+		F53298E32A45DF85009358E7 /* max_size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298E22A45DF85009358E7 /* max_size.swift */; };
 		F57887A22A435D9F00EF2409 /* avg_edge_length.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57887A12A435D9F00EF2409 /* avg_edge_length.swift */; };
 		F5B8A78E2A42EB8C00D47C82 /* GeometryProcessing.docc in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */; };
 		F5B8A78F2A42EB8C00D47C82 /* GeometryProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +79,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F53298DD2A45DB38009358E7 /* list_to_matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = list_to_matrix.swift; sourceTree = "<group>"; };
+		F53298E02A45DCEF009358E7 /* min_size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_size.swift; sourceTree = "<group>"; };
+		F53298E22A45DF85009358E7 /* max_size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = max_size.swift; sourceTree = "<group>"; };
 		F57887A12A435D9F00EF2409 /* avg_edge_length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avg_edge_length.swift; sourceTree = "<group>"; };
 		F5B8A7892A42EB8C00D47C82 /* GeometryProcessing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryProcessing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryProcessing.h; sourceTree = "<group>"; };
@@ -192,6 +198,9 @@
 				F5B8A7E92A43598C00D47C82 /* min_quad_with_fixed_solve.swift */,
 				F57887A12A435D9F00EF2409 /* avg_edge_length.swift */,
 				F5DD34022A44496A008C59C0 /* edges.swift */,
+				F53298DD2A45DB38009358E7 /* list_to_matrix.swift */,
+				F53298E02A45DCEF009358E7 /* min_size.swift */,
+				F53298E22A45DF85009358E7 /* max_size.swift */,
 			);
 			path = GeometryProcessing;
 			sourceTree = "<group>";
@@ -341,6 +350,9 @@
 				F5B8A7C22A43003800D47C82 /* map_vertices_to_circle.swift in Sources */,
 				F5B8A7B42A42FF0E00D47C82 /* flip_avoiding_linesearch.swift in Sources */,
 				F5B8A7A62A42FDA500D47C82 /* project_isometrically_to_plane.swift in Sources */,
+				F53298E12A45DCEF009358E7 /* min_size.swift in Sources */,
+				F53298DE2A45DB38009358E7 /* list_to_matrix.swift in Sources */,
+				F53298E32A45DF85009358E7 /* max_size.swift in Sources */,
 				F5B8A7AC2A42FE5E00D47C82 /* local_basis.swift in Sources */,
 				F5B8A7CE2A431F6A00D47C82 /* reorder.swift in Sources */,
 				F5B8A7D02A431F8600D47C82 /* adjacency_matrix.swift in Sources */,
