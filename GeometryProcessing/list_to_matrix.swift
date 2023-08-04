@@ -19,7 +19,8 @@ import Matrix
 // Outputs:
 //   M  an m by n matrix
 // Returns true on success, false on errors
-func list_to_matrix<T: MatrixElement, MO: Matrix>(_ V: [[T]], _ M: inout MO) -> Bool where MO.Element == T {
+@discardableResult
+public func list_to_matrix<T: MatrixElement, MO: Matrix>(_ V: [[T]], _ M: inout MO) -> Bool where MO.Element == T {
     // number of rows
     let m: Int = V.count
     if (m == 0) {
