@@ -103,3 +103,109 @@ private func triangle_triangle_adjacency_extractTTi(_ F: Mat<UInt32>, _ TTT: ino
     fatalError("To be implemented")
 }
 
+// Adjacency list version, which works with non-manifold meshes
+//
+// Inputs:
+//   F  #F by 3 list of triangle indices
+// Outputs:
+//   TT  #F by 3 list of lists so that TT[i][c] --> {j,k,...} means that
+//     faces j and k etc. are edge-neighbors of face i on face i's edge
+//     opposite corner c
+//   TTj  #F list of lists so that TTj[i][c] --> {j,k,...} means that face
+//     TT[i][c][0] is an edge-neighbor of face i incident on the edge of face
+//     TT[i][c][0] opposite corner j, and TT[i][c][1] " corner k, etc.
+func triangle_triangle_adjacency(_ F: Mati, _ TT: inout [[[Int]]]) {
+    var not_used: [[[Int]]] = [[[]]]
+    triangle_triangle_adjacency(F, false, &TT, &not_used)
+}
+
+// Wrapper with bool to choose whether to compute TTi (this prototype should
+// be "hidden").
+func triangle_triangle_adjacency(_ F: Mati, _ construct_TTi: Bool, _ TT: inout [[[Int]]], _ TTi: inout [[[Int]]]) {
+    assert(F.cols == 3, "Faces must be triangles")
+    // number of faces
+    var E: Mat<Int> = .init()
+    var uE: Mat<Int> = .init()
+    var EMAP: Vec<Int> = .init()
+    var uE2E: [[Int]] = [[]]
+    unique_edge_map(F, &E, &uE, &EMAP, &uE2E)
+    return triangle_triangle_adjacency(E, EMAP, uE2E, construct_TTi, &TT, &TTi)
+}
+
+// Inputs:
+//   E  #F*3 by 2 list of all of directed edges in order (see
+//     `oriented_facets`)
+//   EMAP #F*3 list of indices into uE, mapping each directed edge to unique
+//     undirected edge
+//   uE2E  #uE list of lists of indices into E of coexisting edges
+// See also: unique_edge_map, oriented_facets
+func triangle_triangle_adjacency<ME: Matrix>
+(_ E: ME, _ EMAP: Veci, _ uE2E: [[Int]], _ construct_TTi: Bool, _ TT: inout [[[Int]]], _ TTi: inout [[[Int]]])
+where ME.Element == Int
+{
+    let m: Int = E.rows / 3
+    assert(E.rows == m * 3, "E should come from list of triangles")
+    // E2E[i] --> {j,k,...} means face edge i corresponds to other faces edges j
+    // and k
+    TT = .init(repeating: [[], [], []], count: m)
+    if (construct_TTi) {
+        TTi = .init(repeating: [[], [], []], count: m)
+    }
+    
+    // No race conditions because TT*[f][c]'s are in bijection with e's
+    // Minimum number of items per thread
+    //const size_t num_e = E.rows();
+    // Slightly better memory access than loop over E
+    for f in 0..<m {
+        for c in 0..<3 {
+            let e: Int = f + m * c
+            let N: [Int] = uE2E[EMAP[e]]
+            for ne in N {
+                let nf: Int = ne % m
+                // don't add self
+                if (nf != f) {
+                    TT[f][c].append(nf)
+                    if (construct_TTi) {
+                        let nc: Int = ne / m
+                        TTi[f][c].append(nc)
+                    }
+                }
+            }
+        }
+    }
+}
+
+func triangle_triangle_adjacency<MuEC: Vector, MuEE: Vector>
+(_ EMAP: Veci, _ uEC: MuEC, _ uEE: MuEE, _ construct_TTi: Bool, _ TT: inout [[[Int]]], _ TTi: inout [[[Int]]])
+where MuEC.Element == Int, MuEE.Element == Int {
+    let m: Int = EMAP.rows / 3
+    assert(EMAP.rows == 3 * m, "EMAP should come from list of triangles.")
+    // E2E[i] --> {j,k,...} means face edge i corresponds to other faces edges j
+    // and k
+    TT = .init(repeating: [[], [], []], count: m)
+    if (construct_TTi) {
+        TTi = .init(repeating: [[], [], []], count: m)
+    }
+    
+    // No race conditions because TT*[f][c]'s are in bijection with e's
+    // Minimum number of items per thread
+    //const size_t num_e = E.rows();
+    // Slightly better memory access than loop over E
+    for f in 0..<m {
+        for c in 0..<3 {
+            let e: Int = f + m * c
+            for j in uEC[EMAP[e]]..<uEC[EMAP[e] + 1] {
+                let ne: Int = uEE[j]
+                let nf: Int = ne % m
+                // don't add self
+                if (nf != f) {
+                    TT[f][c].append(nf)
+                    if (construct_TTi) {
+                        let nc: Int = ne / m
+                        TTi[f][c].append(nc)
+                    }
+                }
+            }
+        }
+    }
+}

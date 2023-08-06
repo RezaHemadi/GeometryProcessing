@@ -29,6 +29,17 @@ extension Array {
         
         removeSubrange((lastUniqueIdx + 1)..<endIndex)
     }
+    
+    // Make array elements unique by given predicate
+    public mutating func uniqueAll(by predicate: (Element, Element) -> Bool) {
+        guard (!isEmpty) else { return }
+        
+        for element in self {
+            while let index = firstIndex(where: { predicate($0, element) }) {
+                remove(at: index)
+            }
+        }
+    }
 }
 
 public protocol Countable {
