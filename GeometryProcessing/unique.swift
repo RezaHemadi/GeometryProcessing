@@ -18,9 +18,9 @@ import Matrix
 //   C  #C vector of unique entries in A
 //   IA  #C index vector so that C = A(IA);
 //   IC  #A index vector so that A = C(IC);
-func unique<T: Comparable>(_ A: [T], _ C: inout [T], _ IA: inout [Int], _ IC: inout [Int]) {
-    var IM: [Int] = []
-    var sortA: [T] = []
+func unique<T: Comparable & MatrixElement >(_ A: [T], _ C: inout [T], _ IA: inout [Int], _ IC: inout [Int]) {
+    var IM: [Int] = .init(repeating: 0, count: A.count)
+    var sortA: [T] = .init(repeating: .init(), count: A.count)
     geom_sort(A, true, &sortA, &IM)
     // Original unsorted index map
     IA = .init(repeating: 0, count: sortA.count)
@@ -32,7 +32,6 @@ func unique<T: Comparable>(_ A: [T], _ C: inout [T], _ IA: inout [Int], _ IC: in
     let indexEquals: (Int, Int) -> Bool = { a, b in
         return sortA[a] == sortA[b]
     }
-    
     IA.uniqueAll(by: indexEquals)
     
     IC = .init(repeating: 0, count: A.count)
@@ -54,7 +53,7 @@ func unique<T: Comparable>(_ A: [T], _ C: inout [T], _ IA: inout [Int], _ IC: in
     C = temp_C.compactMap({ $0 })
 }
 
-func unique<T: Comparable>(_ A: [T], _ C: inout [T]) {
+func unique<T: Comparable & MatrixElement>(_ A: [T], _ C: inout [T]) {
     var IA: [Int] = []
     var IC: [Int] = []
     return unique(A, &C, &IA, &IC)

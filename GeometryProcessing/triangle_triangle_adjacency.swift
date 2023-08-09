@@ -19,7 +19,9 @@ import Matrix
   //   TTi  #F by #3 adjacent matrix, the element i,j is the id of edge of the
   //        triangle TT(i,j) that is adjacent with triangle i
   //
-public func triangle_triangle_adjacency(_ F: Mat<Int>, _ TT: inout Mat<Int>, _ TTi: inout Mat<Int>) {
+public func triangle_triangle_adjacency<MF: Matrix>(_ F: MF, _ TT: inout MF, _ TTi: inout MF)
+where MF.Element == Int
+{
     triangle_triangle_adjacency(F, &TT)
     TTi = .Constant(TT.rows, TT.cols, -1)
     
@@ -42,7 +44,9 @@ public func triangle_triangle_adjacency(_ F: Mat<Int>, _ TT: inout Mat<Int>, _ T
     }
 }
 
-public func triangle_triangle_adjacency(_ F: Mat<Int>, _ TT: inout Mat<Int>) {
+public func triangle_triangle_adjacency<MF: Matrix>(_ F: MF, _ TT: inout MF)
+where MF.Element == Int
+{
     let n = F.maxCoeff() + 1
     var VF: Vec<Int> = .init()
     var NI: Vec<Int> = .init()

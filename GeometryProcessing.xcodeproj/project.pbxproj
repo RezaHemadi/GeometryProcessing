@@ -10,6 +10,10 @@
 		F53298DE2A45DB38009358E7 /* list_to_matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298DD2A45DB38009358E7 /* list_to_matrix.swift */; };
 		F53298E12A45DCEF009358E7 /* min_size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298E02A45DCEF009358E7 /* min_size.swift */; };
 		F53298E32A45DF85009358E7 /* max_size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298E22A45DF85009358E7 /* max_size.swift */; };
+		F54FAF222A829A8F00DCC9CF /* euler_characteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FAF212A829A8F00DCC9CF /* euler_characteristic.swift */; };
+		F54FAF252A829C5A00DCC9CF /* edge_topology.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FAF242A829C5A00DCC9CF /* edge_topology.swift */; };
+		F54FAF362A837D9300DCC9CF /* cut_mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FAF352A837D9300DCC9CF /* cut_mesh.swift */; };
+		F54FAF392A83946A00DCC9CF /* HalfEdgeIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FAF382A83946A00DCC9CF /* HalfEdgeIterator.swift */; };
 		F54FD6FE2A5D4355001FACBE /* vertex_components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FD6FD2A5D4355001FACBE /* vertex_components.swift */; };
 		F54FD7062A5D693D001FACBE /* triangulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FD7052A5D693D001FACBE /* triangulate.swift */; };
 		F57887A22A435D9F00EF2409 /* avg_edge_length.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57887A12A435D9F00EF2409 /* avg_edge_length.swift */; };
@@ -18,6 +22,7 @@
 		F5B33DC72A7D3B5A00AEE5DF /* unique_simplices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B33DC62A7D3B5A00AEE5DF /* unique_simplices.swift */; };
 		F5B33DC92A7D41E800AEE5DF /* oriented_facets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B33DC82A7D41E800AEE5DF /* oriented_facets.swift */; };
 		F5B33DCB2A7D8AA700AEE5DF /* unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B33DCA2A7D8AA700AEE5DF /* unique.swift */; };
+		F5B792F12A7FC18D00542BF2 /* is_edge_manifold.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B792F02A7FC18D00542BF2 /* is_edge_manifold.swift */; };
 		F5B8A78E2A42EB8C00D47C82 /* GeometryProcessing.docc in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */; };
 		F5B8A78F2A42EB8C00D47C82 /* GeometryProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5B8A79E2A42F11500D47C82 /* Matrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B8A79B2A42EE1700D47C82 /* Matrix.framework */; };
@@ -89,6 +94,10 @@
 		F53298DD2A45DB38009358E7 /* list_to_matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = list_to_matrix.swift; sourceTree = "<group>"; };
 		F53298E02A45DCEF009358E7 /* min_size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_size.swift; sourceTree = "<group>"; };
 		F53298E22A45DF85009358E7 /* max_size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = max_size.swift; sourceTree = "<group>"; };
+		F54FAF212A829A8F00DCC9CF /* euler_characteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euler_characteristic.swift; sourceTree = "<group>"; };
+		F54FAF242A829C5A00DCC9CF /* edge_topology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edge_topology.swift; sourceTree = "<group>"; };
+		F54FAF352A837D9300DCC9CF /* cut_mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cut_mesh.swift; sourceTree = "<group>"; };
+		F54FAF382A83946A00DCC9CF /* HalfEdgeIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfEdgeIterator.swift; sourceTree = "<group>"; };
 		F54FD6FD2A5D4355001FACBE /* vertex_components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vertex_components.swift; sourceTree = "<group>"; };
 		F54FD7052A5D693D001FACBE /* triangulate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triangulate.swift; sourceTree = "<group>"; };
 		F57887A12A435D9F00EF2409 /* avg_edge_length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avg_edge_length.swift; sourceTree = "<group>"; };
@@ -97,6 +106,7 @@
 		F5B33DC62A7D3B5A00AEE5DF /* unique_simplices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unique_simplices.swift; sourceTree = "<group>"; };
 		F5B33DC82A7D41E800AEE5DF /* oriented_facets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oriented_facets.swift; sourceTree = "<group>"; };
 		F5B33DCA2A7D8AA700AEE5DF /* unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unique.swift; sourceTree = "<group>"; };
+		F5B792F02A7FC18D00542BF2 /* is_edge_manifold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = is_edge_manifold.swift; sourceTree = "<group>"; };
 		F5B8A7892A42EB8C00D47C82 /* GeometryProcessing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryProcessing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryProcessing.h; sourceTree = "<group>"; };
 		F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GeometryProcessing.docc; sourceTree = "<group>"; };
@@ -222,6 +232,11 @@
 				F5B33DC62A7D3B5A00AEE5DF /* unique_simplices.swift */,
 				F5B33DC82A7D41E800AEE5DF /* oriented_facets.swift */,
 				F5B33DCA2A7D8AA700AEE5DF /* unique.swift */,
+				F5B792F02A7FC18D00542BF2 /* is_edge_manifold.swift */,
+				F54FAF212A829A8F00DCC9CF /* euler_characteristic.swift */,
+				F54FAF242A829C5A00DCC9CF /* edge_topology.swift */,
+				F54FAF352A837D9300DCC9CF /* cut_mesh.swift */,
+				F54FAF382A83946A00DCC9CF /* HalfEdgeIterator.swift */,
 			);
 			path = GeometryProcessing;
 			sourceTree = "<group>";
@@ -343,6 +358,7 @@
 				F5B8A7C02A43002100D47C82 /* is_border_vertex.swift in Sources */,
 				F5B8A7EA2A43598C00D47C82 /* min_quad_with_fixed_solve.swift in Sources */,
 				F5B8A7BE2A43000000D47C82 /* cumsum.swift in Sources */,
+				F54FAF362A837D9300DCC9CF /* cut_mesh.swift in Sources */,
 				F5B8A78E2A42EB8C00D47C82 /* GeometryProcessing.docc in Sources */,
 				F5B8A7A42A42FD0700D47C82 /* edge_lengths.swift in Sources */,
 				F5B8A7D62A431FCE00D47C82 /* unique_rows.swift in Sources */,
@@ -361,6 +377,7 @@
 				F5B8A7B62A42FF8A00D47C82 /* linesearch.swift in Sources */,
 				F5B33DC52A7D234000AEE5DF /* unique_edge_map.swift in Sources */,
 				F5B8A7D22A431FA100D47C82 /* vector_area_matrix.swift in Sources */,
+				F54FAF252A829C5A00DCC9CF /* edge_topology.swift in Sources */,
 				F5B8A7D42A431FB900D47C82 /* boundary_facets.swift in Sources */,
 				F5B8A7BC2A42FFE400D47C82 /* vertex_triangle_adjacency.swift in Sources */,
 				F5B8A7DE2A433CC300D47C82 /* PerFaceNormals.swift in Sources */,
@@ -378,11 +395,14 @@
 				F53298E12A45DCEF009358E7 /* min_size.swift in Sources */,
 				F53298DE2A45DB38009358E7 /* list_to_matrix.swift in Sources */,
 				F53298E32A45DF85009358E7 /* max_size.swift in Sources */,
+				F5B792F12A7FC18D00542BF2 /* is_edge_manifold.swift in Sources */,
 				F5B8A7AC2A42FE5E00D47C82 /* local_basis.swift in Sources */,
 				F5B8A7CE2A431F6A00D47C82 /* reorder.swift in Sources */,
+				F54FAF392A83946A00DCC9CF /* HalfEdgeIterator.swift in Sources */,
 				F5B8A7D02A431F8600D47C82 /* adjacency_matrix.swift in Sources */,
 				F5B33DC72A7D3B5A00AEE5DF /* unique_simplices.swift in Sources */,
 				F5B33DC22A7CF4FD00AEE5DF /* is_vertex_manifold.swift in Sources */,
+				F54FAF222A829A8F00DCC9CF /* euler_characteristic.swift in Sources */,
 				F5B8A7D82A431FE400D47C82 /* accumarray.swift in Sources */,
 				F57887A22A435D9F00EF2409 /* avg_edge_length.swift in Sources */,
 				F5B33DCB2A7D8AA700AEE5DF /* unique.swift in Sources */,

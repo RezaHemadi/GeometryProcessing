@@ -20,7 +20,9 @@ import Matrix
   //   NI  #V+1 list  cumulative sum of vertex-triangle degrees with a
   //     preceeding zero. "How many faces" have been seen before visiting this
   //     vertex and its incident faces.
-public func vertex_triangle_adjacency(F: Mat<Int>, n: Int, VF: inout Vec<Int>, NI: inout Vec<Int>) {
+public func vertex_triangle_adjacency<MF: Matrix>(F: MF, n: Int, VF: inout Vec<Int>, NI: inout Vec<Int>)
+where MF.Element == Int
+{
     // vfd  #V list so that vfd(i) contains the vertex-face degree (number of
         // faces incident on vertex i)
     var vfd: Vec<Int> = .Zero(n)

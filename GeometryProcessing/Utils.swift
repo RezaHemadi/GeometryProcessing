@@ -7,6 +7,27 @@
 
 import Foundation
 
+extension Array: Comparable where Element == Int {
+    public static func < (lhs: Array<Int>, rhs: Array<Int>) -> Bool {
+        if lhs.isEmpty { return true }
+        if rhs.isEmpty { return false }
+        let n = Swift.max(lhs.count, rhs.count)
+        
+        for i in 0..<n {
+            if !lhs.indices.contains(i) { return true }
+            if !rhs.indices.contains(i) { return false }
+            
+            if lhs[i] == rhs[i] {
+                continue
+            } else {
+                return lhs[i] < rhs[i]
+            }
+        }
+        
+        return false
+    }
+}
+
 extension Array {
     /// Make consecutive elements of the array unique by given binary predicate
     public mutating func unique(by predicate: (Element, Element) -> Bool) {
@@ -34,10 +55,22 @@ extension Array {
     public mutating func uniqueAll(by predicate: (Element, Element) -> Bool) {
         guard (!isEmpty) else { return }
         
-        for element in self {
-            while let index = firstIndex(where: { predicate($0, element) }) {
-                remove(at: index)
+        var indicesToRemove: [Int] = []
+        
+        for i in 0..<count {
+            for j in (i + 1)..<count {
+                if predicate(self[i], self[j]) {
+                    indicesToRemove.append(j)
+                }
             }
+        }
+        
+        indicesToRemove.sort()
+        var n: Int = 0
+        while !indicesToRemove.isEmpty {
+            let index = indicesToRemove.removeFirst()
+            remove(at: index - n)
+            n += 1
         }
     }
 }
