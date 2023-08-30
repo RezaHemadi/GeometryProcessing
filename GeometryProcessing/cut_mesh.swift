@@ -31,7 +31,7 @@ import Matrix
 // In place mesh cut
 public func cut_mesh<MV: Matrix, MF: Matrix, MCUT: Matrix, MI: Vector>
 (_ V: inout MV, _ F: inout MF, _ C: MCUT, _ I: inout MI)
-where MV.Element == Double, MF.Element == Int, MI.Element == Int, MCUT.Element == Bool
+where MV.Element == Double, MF.Element == Int, MI.Element == Int, MCUT.Element == Int
 {
     var FF = MF()
     var FFi = MF()
@@ -41,7 +41,7 @@ where MV.Element == Double, MF.Element == Int, MI.Element == Int, MCUT.Element =
 
 public func cut_mesh<MV: Matrix, MF: Matrix, MFF: Matrix, MFFI: Matrix, MC: Matrix, MI: Vector>
 (_ V: inout MV, _ F: inout MF, _ FF: inout MFF, _ FFi: inout MFFI, _ C: MC, _ I: inout MI)
-where MV.Element == Double, MF.Element == Int, MFF.Element == Int, MFFI.Element == Int, MI.Element == Int, MC.Element == Bool
+where MV.Element == Double, MF.Element == Int, MFF.Element == Int, MFFI.Element == Int, MI.Element == Int, MC.Element == Int
 {
     // store current number of occurance of each vertex as the alg proceed
     var occurence = Vec<Int>(V.rows)
@@ -57,7 +57,7 @@ where MV.Element == Double, MF.Element == Int, MFF.Element == Int, MFFI.Element 
             let v: Int = F[i, (k + 1) % 3]
             if (FF[i, k] == -1) { // add one extra occurance for boundary vertices
                 eventual[u] += 1
-            } else if (C[i, k] == true && u < v) { // only compute every (undirected edge ones
+            } else if (C[i, k] == 1 && u < v) { // only compute every (undirected edge ones
                 eventual[u] += 1
                 eventual[v] += 1
             }
@@ -81,7 +81,7 @@ where MV.Element == Double, MF.Element == Int, MFF.Element == Int, MFFI.Element 
         for k in 0..<3 {
             let v0: Int = F[f, k]
             if (F[f, k] >= n_v) { continue } // ignore new vertices
-            if (C[f, k] == true && occurence[v0] != eventual[v0]) {
+            if (C[f, k] == 1 && occurence[v0] != eventual[v0]) {
                 let he = HalfEdgeIterator(F, FF, FFi, f, k)
                 
                 // rotate clock-wise around v0 until hit another cut
@@ -94,7 +94,7 @@ where MV.Element == Double, MF.Element == Int, MFF.Element == Int, MFFI.Element 
                     he.flipF()
                     fi = he.Fi()
                     ei = he.Ei()
-                } while (C[fi, ei] == false && !he.isBorder())
+                } while (C[fi, ei] == 0 && !he.isBorder())
                 
                 // make a copy
                 V.row(pos) <<== V.row(v0)
@@ -123,7 +123,7 @@ where MV.Element == Double, MF.Element == Int, MFF.Element == Int, MFFI.Element 
 
 public func cut_mesh<MV: Matrix, MF: Matrix, MCUTS: Matrix, MVN: Matrix, MFN: Matrix>
 (_ V: MV, _ F: MF, _ C: MCUTS, _ Vn: inout MVN, _ Fn: inout MFN)
-where MVN.Element == MV.Element, MFN.Element == MF.Element, MF.Element == Int, MV.Element == Double, MCUTS.Element == Bool
+where MVN.Element == MV.Element, MFN.Element == MF.Element, MF.Element == Int, MV.Element == Double, MCUTS.Element == Int
 {
     Vn = .init(V, V.rows, V.cols)
     Fn = .init(F, F.rows, F.cols)
@@ -133,7 +133,7 @@ where MVN.Element == MV.Element, MFN.Element == MF.Element, MF.Element == Int, M
 
 public func cut_mesh<MV: Matrix, MF: Matrix, MCUTS: Matrix, MVN: Matrix, MFN: Matrix, MI: Vector>
 (_ V: MV, _ F: MF, _ C: MCUTS, _ Vn: inout MVN, _ Fn: inout MFN, _ I: inout MI)
-where MV.Element == Double, MF.Element == Int, MI.Element == Int, MVN.Element == MV.Element, MFN.Element == MF.Element, MCUTS.Element == Bool
+where MV.Element == Double, MF.Element == Int, MI.Element == Int, MVN.Element == MV.Element, MFN.Element == MF.Element, MCUTS.Element == Int
 {
     Vn = .init(V, V.rows, V.cols)
     Fn = .init(F, F.rows, F.cols)

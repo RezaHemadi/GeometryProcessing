@@ -15,7 +15,6 @@
 		F54FAF362A837D9300DCC9CF /* cut_mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FAF352A837D9300DCC9CF /* cut_mesh.swift */; };
 		F54FAF392A83946A00DCC9CF /* HalfEdgeIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FAF382A83946A00DCC9CF /* HalfEdgeIterator.swift */; };
 		F54FD6FE2A5D4355001FACBE /* vertex_components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FD6FD2A5D4355001FACBE /* vertex_components.swift */; };
-		F54FD7062A5D693D001FACBE /* triangulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FD7052A5D693D001FACBE /* triangulate.swift */; };
 		F57887A22A435D9F00EF2409 /* avg_edge_length.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57887A12A435D9F00EF2409 /* avg_edge_length.swift */; };
 		F5B33DC22A7CF4FD00AEE5DF /* is_vertex_manifold.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B33DC12A7CF4FD00AEE5DF /* is_vertex_manifold.swift */; };
 		F5B33DC52A7D234000AEE5DF /* unique_edge_map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B33DC42A7D234000AEE5DF /* unique_edge_map.swift */; };
@@ -64,6 +63,9 @@
 		F5B8A7E82A43597000D47C82 /* min_quad_with_fixed_precompute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E72A43597000D47C82 /* min_quad_with_fixed_precompute.swift */; };
 		F5B8A7EA2A43598C00D47C82 /* min_quad_with_fixed_solve.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A7E92A43598C00D47C82 /* min_quad_with_fixed_solve.swift */; };
 		F5DD34032A44496A008C59C0 /* edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD34022A44496A008C59C0 /* edges.swift */; };
+		F5ED4F1E2A9CE83400AD57D0 /* triangle.c in Sources */ = {isa = PBXBuildFile; fileRef = F5ED4F1D2A9CE83400AD57D0 /* triangle.c */; };
+		F5ED4F202A9CE84D00AD57D0 /* triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ED4F1F2A9CE84D00AD57D0 /* triangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5ED4F232A9CED5200AD57D0 /* Triangulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ED4F222A9CED5200AD57D0 /* Triangulate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +101,6 @@
 		F54FAF352A837D9300DCC9CF /* cut_mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cut_mesh.swift; sourceTree = "<group>"; };
 		F54FAF382A83946A00DCC9CF /* HalfEdgeIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfEdgeIterator.swift; sourceTree = "<group>"; };
 		F54FD6FD2A5D4355001FACBE /* vertex_components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vertex_components.swift; sourceTree = "<group>"; };
-		F54FD7052A5D693D001FACBE /* triangulate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triangulate.swift; sourceTree = "<group>"; };
 		F57887A12A435D9F00EF2409 /* avg_edge_length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avg_edge_length.swift; sourceTree = "<group>"; };
 		F5B33DC12A7CF4FD00AEE5DF /* is_vertex_manifold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = is_vertex_manifold.swift; sourceTree = "<group>"; };
 		F5B33DC42A7D234000AEE5DF /* unique_edge_map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unique_edge_map.swift; sourceTree = "<group>"; };
@@ -148,6 +149,9 @@
 		F5B8A7E72A43597000D47C82 /* min_quad_with_fixed_precompute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_quad_with_fixed_precompute.swift; sourceTree = "<group>"; };
 		F5B8A7E92A43598C00D47C82 /* min_quad_with_fixed_solve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_quad_with_fixed_solve.swift; sourceTree = "<group>"; };
 		F5DD34022A44496A008C59C0 /* edges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edges.swift; sourceTree = "<group>"; };
+		F5ED4F1D2A9CE83400AD57D0 /* triangle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = triangle.c; sourceTree = "<group>"; };
+		F5ED4F1F2A9CE84D00AD57D0 /* triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangle.h; sourceTree = "<group>"; };
+		F5ED4F222A9CED5200AD57D0 /* Triangulate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangulate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F501B74E2A865E2100F4CCEC /* Triangulation */ = {
+			isa = PBXGroup;
+			children = (
+				F5ED4F222A9CED5200AD57D0 /* Triangulate.swift */,
+			);
+			path = Triangulation;
+			sourceTree = "<group>";
+		};
 		F5B8A77F2A42EB8C00D47C82 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +194,9 @@
 		F5B8A78B2A42EB8C00D47C82 /* GeometryProcessing */ = {
 			isa = PBXGroup;
 			children = (
+				F5ED4F1F2A9CE84D00AD57D0 /* triangle.h */,
+				F5ED4F1D2A9CE83400AD57D0 /* triangle.c */,
+				F501B74E2A865E2100F4CCEC /* Triangulation */,
 				F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */,
 				F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */,
 				F5B8A7A12A42F13000D47C82 /* doubleArea.swift */,
@@ -226,7 +241,6 @@
 				F53298E02A45DCEF009358E7 /* min_size.swift */,
 				F53298E22A45DF85009358E7 /* max_size.swift */,
 				F54FD6FD2A5D4355001FACBE /* vertex_components.swift */,
-				F54FD7052A5D693D001FACBE /* triangulate.swift */,
 				F5B33DC12A7CF4FD00AEE5DF /* is_vertex_manifold.swift */,
 				F5B33DC42A7D234000AEE5DF /* unique_edge_map.swift */,
 				F5B33DC62A7D3B5A00AEE5DF /* unique_simplices.swift */,
@@ -264,6 +278,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5ED4F202A9CE84D00AD57D0 /* triangle.h in Headers */,
 				F5B8A78F2A42EB8C00D47C82 /* GeometryProcessing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +316,7 @@
 				TargetAttributes = {
 					F5B8A7882A42EB8C00D47C82 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -366,7 +382,6 @@
 				F5B8A7E62A43592300D47C82 /* min_quad_with_fixed_data.swift in Sources */,
 				F5B8A7DA2A433C9700D47C82 /* repdiag.swift in Sources */,
 				F5B8A7E82A43597000D47C82 /* min_quad_with_fixed_precompute.swift in Sources */,
-				F54FD7062A5D693D001FACBE /* triangulate.swift in Sources */,
 				F5B8A7E42A43533600D47C82 /* Utils.swift in Sources */,
 				F5B8A7BA2A42FFC900D47C82 /* triangle_triangle_adjacency.swift in Sources */,
 				F5B33DC92A7D41E800AEE5DF /* oriented_facets.swift in Sources */,
@@ -394,8 +409,10 @@
 				F5B8A7A62A42FDA500D47C82 /* project_isometrically_to_plane.swift in Sources */,
 				F53298E12A45DCEF009358E7 /* min_size.swift in Sources */,
 				F53298DE2A45DB38009358E7 /* list_to_matrix.swift in Sources */,
+				F5ED4F1E2A9CE83400AD57D0 /* triangle.c in Sources */,
 				F53298E32A45DF85009358E7 /* max_size.swift in Sources */,
 				F5B792F12A7FC18D00542BF2 /* is_edge_manifold.swift in Sources */,
+				F5ED4F232A9CED5200AD57D0 /* Triangulate.swift in Sources */,
 				F5B8A7AC2A42FE5E00D47C82 /* local_basis.swift in Sources */,
 				F5B8A7CE2A431F6A00D47C82 /* reorder.swift in Sources */,
 				F54FAF392A83946A00DCC9CF /* HalfEdgeIterator.swift in Sources */,
@@ -468,8 +485,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "";
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG ANSI_DECLARATORS TRILIBRARY";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -524,7 +543,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "ANSI_DECLARATORS TRILIBRARY";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -536,6 +558,7 @@
 		F5B8A7932A42EB8C00D47C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -555,13 +578,18 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Thingoteam.GeometryProcessing;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG ANSI_DECLARATORS TRILIBRARY";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -570,6 +598,7 @@
 		F5B8A7942A42EB8C00D47C82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -589,13 +618,17 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Thingoteam.GeometryProcessing;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "ANSI_DECLARATORS TRILIBRARY";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -14,5 +14,4 @@ FOUNDATION_EXPORT double GeometryProcessingVersionNumber;
 FOUNDATION_EXPORT const unsigned char GeometryProcessingVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GeometryProcessing/PublicHeader.h>
-
-
+#import <GeometryProcessing/triangle.h>
