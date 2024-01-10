@@ -63,3 +63,8 @@ public func per_face_normals<M1: Matrix, M2: Matrix, M3: Matrix>(V: M1, F: M2, N
     let Z: Vec3<M1.Element> = [0, 0, 0]
     return per_face_normals(V: V, F: F, Z: Z, N: &N)
 }
+
+public func per_face_normals<M1: Matrix, M2: Matrix, M3: Matrix>(V: M1, F: M2, N: inout M3) where M1.Element == M3.Element, M2.Element == Int, M1.Element: SignedNumeric, M1.Element == Float {
+    let Z: Vec3<M1.Element> = [0, 0, 0]
+    return per_face_normals(V: V, F: F, Z: Z, N: &N)
+}
