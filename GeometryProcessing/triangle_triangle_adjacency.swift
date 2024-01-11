@@ -34,7 +34,7 @@ where MF.Element == Int
                 for kn in 0..<3 {
                     let vin = F[fn, kn]
                     let vjn = F[fn, (kn + 1) % 3]
-                    if (vi == vjn && vjn == vj) {
+                    if (vi == vjn && vin == vj) {
                         TTi[f, k] = kn
                         break
                     }
