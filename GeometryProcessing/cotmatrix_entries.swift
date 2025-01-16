@@ -35,6 +35,7 @@ public func cotmatrix_entries(_ V: Matd, _ F: Mati, _ C: inout Matd) {
     doublearea(l, 0.0, &dblA)
     // cotangents and diagonal entries for element matrices
     // correctly divided by 4 (alec 2010)
+    // https://www.alecjacobson.com/weblog/2405.html
     C.resize(m, 3)
     for i in 0..<m {
         C[i, 0] = (l2[i, 1] + l2[i, 2] - l2[i, 0]) / dblA[i] / 4.0

@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50EE5852C2EB04800F6A3A5 /* GeometryProcessingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50EE5842C2EB04800F6A3A5 /* GeometryProcessingTests.swift */; };
+		F50EE5862C2EB04800F6A3A5 /* GeometryProcessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B8A7892A42EB8C00D47C82 /* GeometryProcessing.framework */; };
 		F53298DE2A45DB38009358E7 /* list_to_matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298DD2A45DB38009358E7 /* list_to_matrix.swift */; };
 		F53298E12A45DCEF009358E7 /* min_size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298E02A45DCEF009358E7 /* min_size.swift */; };
 		F53298E32A45DF85009358E7 /* max_size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298E22A45DF85009358E7 /* max_size.swift */; };
+		F53D99FE2D38F19700251148 /* massmatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53D99FD2D38F19700251148 /* massmatrix.swift */; };
+		F53D9A022D38FE5500251148 /* massmatrix_intrinsic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53D9A012D38FE5500251148 /* massmatrix_intrinsic.swift */; };
 		F54FAF222A829A8F00DCC9CF /* euler_characteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FAF212A829A8F00DCC9CF /* euler_characteristic.swift */; };
 		F54FAF252A829C5A00DCC9CF /* edge_topology.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FAF242A829C5A00DCC9CF /* edge_topology.swift */; };
 		F54FAF362A837D9300DCC9CF /* cut_mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54FAF352A837D9300DCC9CF /* cut_mesh.swift */; };
@@ -21,6 +25,7 @@
 		F5B33DC72A7D3B5A00AEE5DF /* unique_simplices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B33DC62A7D3B5A00AEE5DF /* unique_simplices.swift */; };
 		F5B33DC92A7D41E800AEE5DF /* oriented_facets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B33DC82A7D41E800AEE5DF /* oriented_facets.swift */; };
 		F5B33DCB2A7D8AA700AEE5DF /* unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B33DCA2A7D8AA700AEE5DF /* unique.swift */; };
+		F5B5B2542D39532400505121 /* repmat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B5B2532D39532400505121 /* repmat.swift */; };
 		F5B792F12A7FC18D00542BF2 /* is_edge_manifold.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B792F02A7FC18D00542BF2 /* is_edge_manifold.swift */; };
 		F5B8A78E2A42EB8C00D47C82 /* GeometryProcessing.docc in Sources */ = {isa = PBXBuildFile; fileRef = F5B8A78D2A42EB8C00D47C82 /* GeometryProcessing.docc */; };
 		F5B8A78F2A42EB8C00D47C82 /* GeometryProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,6 +74,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F50EE5872C2EB04800F6A3A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5B8A7802A42EB8C00D47C82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5B8A7882A42EB8C00D47C82;
+			remoteInfo = GeometryProcessing;
+		};
+		F56FA7B52BD656260026905D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5B8A7962A42EE1700D47C82 /* Matrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5EC90222B94A46800536043;
+			remoteInfo = MatrixTests;
+		};
 		F5B8A79A2A42EE1700D47C82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F5B8A7962A42EE1700D47C82 /* Matrix.xcodeproj */;
@@ -93,9 +112,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F50EE5822C2EB04700F6A3A5 /* GeometryProcessingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeometryProcessingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50EE5842C2EB04800F6A3A5 /* GeometryProcessingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryProcessingTests.swift; sourceTree = "<group>"; };
 		F53298DD2A45DB38009358E7 /* list_to_matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = list_to_matrix.swift; sourceTree = "<group>"; };
 		F53298E02A45DCEF009358E7 /* min_size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min_size.swift; sourceTree = "<group>"; };
 		F53298E22A45DF85009358E7 /* max_size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = max_size.swift; sourceTree = "<group>"; };
+		F53D99FD2D38F19700251148 /* massmatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = massmatrix.swift; sourceTree = "<group>"; };
+		F53D9A012D38FE5500251148 /* massmatrix_intrinsic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = massmatrix_intrinsic.swift; sourceTree = "<group>"; };
 		F54FAF212A829A8F00DCC9CF /* euler_characteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euler_characteristic.swift; sourceTree = "<group>"; };
 		F54FAF242A829C5A00DCC9CF /* edge_topology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edge_topology.swift; sourceTree = "<group>"; };
 		F54FAF352A837D9300DCC9CF /* cut_mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cut_mesh.swift; sourceTree = "<group>"; };
@@ -107,6 +130,7 @@
 		F5B33DC62A7D3B5A00AEE5DF /* unique_simplices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unique_simplices.swift; sourceTree = "<group>"; };
 		F5B33DC82A7D41E800AEE5DF /* oriented_facets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oriented_facets.swift; sourceTree = "<group>"; };
 		F5B33DCA2A7D8AA700AEE5DF /* unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unique.swift; sourceTree = "<group>"; };
+		F5B5B2532D39532400505121 /* repmat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repmat.swift; sourceTree = "<group>"; };
 		F5B792F02A7FC18D00542BF2 /* is_edge_manifold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = is_edge_manifold.swift; sourceTree = "<group>"; };
 		F5B8A7892A42EB8C00D47C82 /* GeometryProcessing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryProcessing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B8A78C2A42EB8C00D47C82 /* GeometryProcessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryProcessing.h; sourceTree = "<group>"; };
@@ -155,6 +179,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F50EE57F2C2EB04700F6A3A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50EE5862C2EB04800F6A3A5 /* GeometryProcessing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5B8A7862A42EB8C00D47C82 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,10 +206,19 @@
 			path = Triangulation;
 			sourceTree = "<group>";
 		};
+		F50EE5832C2EB04800F6A3A5 /* GeometryProcessingTests */ = {
+			isa = PBXGroup;
+			children = (
+				F50EE5842C2EB04800F6A3A5 /* GeometryProcessingTests.swift */,
+			);
+			path = GeometryProcessingTests;
+			sourceTree = "<group>";
+		};
 		F5B8A77F2A42EB8C00D47C82 = {
 			isa = PBXGroup;
 			children = (
 				F5B8A78B2A42EB8C00D47C82 /* GeometryProcessing */,
+				F50EE5832C2EB04800F6A3A5 /* GeometryProcessingTests */,
 				F5B8A78A2A42EB8C00D47C82 /* Products */,
 				F5B8A7952A42EE1600D47C82 /* Frameworks */,
 			);
@@ -187,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				F5B8A7892A42EB8C00D47C82 /* GeometryProcessing.framework */,
+				F50EE5822C2EB04700F6A3A5 /* GeometryProcessingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,6 +293,9 @@
 				F54FAF242A829C5A00DCC9CF /* edge_topology.swift */,
 				F54FAF352A837D9300DCC9CF /* cut_mesh.swift */,
 				F54FAF382A83946A00DCC9CF /* HalfEdgeIterator.swift */,
+				F53D99FD2D38F19700251148 /* massmatrix.swift */,
+				F53D9A012D38FE5500251148 /* massmatrix_intrinsic.swift */,
+				F5B5B2532D39532400505121 /* repmat.swift */,
 			);
 			path = GeometryProcessing;
 			sourceTree = "<group>";
@@ -267,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				F5B8A79B2A42EE1700D47C82 /* Matrix.framework */,
+				F56FA7B62BD656260026905D /* MatrixTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,6 +332,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		F50EE5812C2EB04700F6A3A5 /* GeometryProcessingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F50EE58D2C2EB04800F6A3A5 /* Build configuration list for PBXNativeTarget "GeometryProcessingTests" */;
+			buildPhases = (
+				F50EE57E2C2EB04700F6A3A5 /* Sources */,
+				F50EE57F2C2EB04700F6A3A5 /* Frameworks */,
+				F50EE5802C2EB04700F6A3A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F50EE5882C2EB04800F6A3A5 /* PBXTargetDependency */,
+			);
+			name = GeometryProcessingTests;
+			productName = GeometryProcessingTests;
+			productReference = F50EE5822C2EB04700F6A3A5 /* GeometryProcessingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F5B8A7882A42EB8C00D47C82 /* GeometryProcessing */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5B8A7922A42EB8C00D47C82 /* Build configuration list for PBXNativeTarget "GeometryProcessing" */;
@@ -312,8 +376,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					F50EE5812C2EB04700F6A3A5 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					F5B8A7882A42EB8C00D47C82 = {
 						CreatedOnToolsVersion = 14.3.1;
 						LastSwiftMigration = 1430;
@@ -340,11 +408,19 @@
 			projectRoot = "";
 			targets = (
 				F5B8A7882A42EB8C00D47C82 /* GeometryProcessing */,
+				F50EE5812C2EB04700F6A3A5 /* GeometryProcessingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		F56FA7B62BD656260026905D /* MatrixTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MatrixTests.xctest;
+			remoteRef = F56FA7B52BD656260026905D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F5B8A79B2A42EE1700D47C82 /* Matrix.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -355,6 +431,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F50EE5802C2EB04700F6A3A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5B8A7872A42EB8C00D47C82 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +448,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F50EE57E2C2EB04700F6A3A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50EE5852C2EB04800F6A3A5 /* GeometryProcessingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5B8A7852A42EB8C00D47C82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -395,6 +486,7 @@
 				F54FAF252A829C5A00DCC9CF /* edge_topology.swift in Sources */,
 				F5B8A7D42A431FB900D47C82 /* boundary_facets.swift in Sources */,
 				F5B8A7BC2A42FFE400D47C82 /* vertex_triangle_adjacency.swift in Sources */,
+				F5B5B2542D39532400505121 /* repmat.swift in Sources */,
 				F5B8A7DE2A433CC300D47C82 /* PerFaceNormals.swift in Sources */,
 				F5B8A7E02A433CDC00D47C82 /* PerVertexNormals.swift in Sources */,
 				F5B8A7A22A42F13000D47C82 /* doubleArea.swift in Sources */,
@@ -405,6 +497,7 @@
 				F5B8A7DC2A433CAC00D47C82 /* lscm.swift in Sources */,
 				F5B8A7C22A43003800D47C82 /* map_vertices_to_circle.swift in Sources */,
 				F5B8A7B42A42FF0E00D47C82 /* flip_avoiding_linesearch.swift in Sources */,
+				F53D99FE2D38F19700251148 /* massmatrix.swift in Sources */,
 				F54FD6FE2A5D4355001FACBE /* vertex_components.swift in Sources */,
 				F5B8A7A62A42FDA500D47C82 /* project_isometrically_to_plane.swift in Sources */,
 				F53298E12A45DCEF009358E7 /* min_size.swift in Sources */,
@@ -416,6 +509,7 @@
 				F5B8A7AC2A42FE5E00D47C82 /* local_basis.swift in Sources */,
 				F5B8A7CE2A431F6A00D47C82 /* reorder.swift in Sources */,
 				F54FAF392A83946A00DCC9CF /* HalfEdgeIterator.swift in Sources */,
+				F53D9A022D38FE5500251148 /* massmatrix_intrinsic.swift in Sources */,
 				F5B8A7D02A431F8600D47C82 /* adjacency_matrix.swift in Sources */,
 				F5B33DC72A7D3B5A00AEE5DF /* unique_simplices.swift in Sources */,
 				F5B33DC22A7CF4FD00AEE5DF /* is_vertex_manifold.swift in Sources */,
@@ -429,7 +523,62 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F50EE5882C2EB04800F6A3A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5B8A7882A42EB8C00D47C82 /* GeometryProcessing */;
+			targetProxy = F50EE5872C2EB04800F6A3A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		F50EE5892C2EB04800F6A3A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Thingoteam.GeometryProcessingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F50EE58A2C2EB04800F6A3A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Thingoteam.GeometryProcessingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F5B8A7902A42EB8C00D47C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -570,6 +719,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,6 +760,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -637,6 +788,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F50EE58D2C2EB04800F6A3A5 /* Build configuration list for PBXNativeTarget "GeometryProcessingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50EE5892C2EB04800F6A3A5 /* Debug */,
+				F50EE58A2C2EB04800F6A3A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F5B8A7832A42EB8C00D47C82 /* Build configuration list for PBXProject "GeometryProcessing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
